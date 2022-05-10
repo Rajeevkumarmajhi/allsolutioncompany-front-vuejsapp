@@ -6,10 +6,10 @@
     <div class='flex justify-between items-center px-4 py-10 mx-auto max-w-7xl sm:px-6 lg:px-8'>
       <div class='flex-1 min-w-0'>
         <h2 class='py-3 text-xl font-bold lg:text-4xl text-second-color-600'>
-          {{ $t('Offline Categories') }}
+          {{ $t('Offline Services') }}
         </h2>
         <p class='text-sm sm:text-base text-second-color-400 sm:truncate'>
-          {{ $t('Featured Categories Subtitle') }}
+          <!-- {{ $t('Featured Categories Subtitle') }} -->
         </p>
       </div>
       <div class='flex mt-4 md:mt-0'>
@@ -29,10 +29,10 @@
     <div class='flex justify-between items-center px-4 py-10 mx-auto max-w-7xl sm:px-6 lg:px-8'>
       <div class='flex-1 min-w-0'>
         <h2 class='py-3 text-xl font-bold lg:text-4xl text-second-color-600'>
-          {{ $t('Online Categories') }}
+          {{ $t('Online Services') }}
         </h2>
         <p class='text-sm sm:text-base text-second-color-400 sm:truncate'>
-          {{ $t('Featured Categories Subtitle') }}
+          <!-- {{ $t('Featured Categories Subtitle') }} -->
         </p>
       </div>
       <div class='flex mt-4 md:mt-0'>

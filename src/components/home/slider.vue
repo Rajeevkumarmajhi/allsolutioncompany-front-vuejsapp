@@ -1,6 +1,5 @@
 <template>
-  <div class='relative'>
-
+  <div class='relative pt-1'>
     <div class='absolute inset-x-0 bottom-0 h-1/2 bg-accent-color-50' />
     <SliderBackground />
     <Loader v-if='slides.length === 0' height='h-48 sm:h-96' />
@@ -14,7 +13,7 @@
             <div class='absolute inset-0' />
           </div>
           <div class='flex relative items-center px-6 w-full h-48 sm:px-10 sm:h-96'>
-            <p class='w-1/3 text-sm font-bold text-gray-700 sm:text-xl lg:text-3xl'>
+            <p class='w-1/3 text-sm font-bold text-white sm:text-xl lg:text-3xl'>
               {{ this.$filters.transString(slide.text) }}
             </p>
           </div>
@@ -39,7 +38,7 @@ import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import { createNamespacedHelpers } from 'vuex'
 import SliderBackground from './partial/slider_background.vue'
-import SearchBar from './partial/search_bar.vue'
+// import SearchBar from './partial/search_bar.vue'
 import Loader from '../partial/loader.vue'
 
 const { mapState, mapActions } = createNamespacedHelpers('slider')
@@ -52,7 +51,7 @@ export default {
     Slide,
     Navigation,
     SliderBackground,
-    SearchBar,
+    // SearchBar,
   },
   mounted() {
     this.getSlidesAction()

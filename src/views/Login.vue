@@ -9,7 +9,7 @@
         <form class='space-y-6' @submit.prevent='this.login'>
           <div class='mt-1'>
             <input id='email' :placeholder='$t("Your Email address")'
-                   :value='user.email'
+                   v-model="email"
                    autocomplete='email'
                    class='block px-3 py-2 w-full placeholder-gray-400 rounded-md border border-gray-300 shadow-sm appearance-none focus:outline-none focus:ring-main-color-500 focus:border-main-color-500 sm:text-sm'
                    name='email'
@@ -65,6 +65,11 @@ export default {
     SocialLogin,
     Heading,
   },
+  data (){
+        return {
+            email : '',
+        }
+    },
   computed: {
     ...mapState('user', {
       user: state => state.user,
@@ -75,11 +80,18 @@ export default {
     ...mapActions('snackbar', ['toggleSnackBarAction']),
 
     login(event) {
+      let self = this
       this.loginAction(event).then(result => {
         if (result.type === 'success') {
-          console.log(this.$route.redirectedFrom)
           this.$router.replace(this.$route.redirectedFrom || { name: 'Home' })
+        }else{
+          console.log(self.email);
+          if(result.message=="Please verify your email to continue"){
+            self.$router.push({name:'VerifyEmail', params:{'email':self.email} })
+          }
+
         }
+
         this.toggleSnackBarAction(result)
       })
     },

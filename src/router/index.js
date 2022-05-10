@@ -10,6 +10,7 @@ import Bookings from '../views/Bookings.vue'
 import Favorites from '../views/Favorites.vue'
 import Search from '../views/Search.vue'
 import CustomPage from '../views/CustomPage.vue'
+import VerifyEmail from '../views/VerifyEmail.vue'
 import { createRouter as createVueRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -30,6 +31,8 @@ const routes = [
     { path: '/bookings/:action/native/:id', name: 'Native', component: Bookings, meta: { requiresAuth: true } },
     { path: '/help/:id?', name: 'Help', component: Help },
     { path: '/pages/:id', name: 'CustomPage', component: CustomPage },
+    { path: '/verify-email/:email', name: 'VerifyEmail', component: VerifyEmail },
+    
 
 ]
 

@@ -48,6 +48,9 @@
                   {{ this.$filters.transString(page.title) }}
                 </router-link>
               </li>
+              <li>
+                <a class="text-base text-gray-500 hover:text-second-color-600" :href="https='//'+'admin.allsolutioncompany.com/register'">Register as a service provider</a>
+              </li>
             </ul>
           </div>
         </div>
